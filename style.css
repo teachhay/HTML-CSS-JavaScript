@@ -1,0 +1,700 @@
+/* #region Main */
+body{
+  background-color: #f1f3f8;
+}
+
+.container-fluid {
+  background-color: #f1f3f8;
+  height: 100vh;
+  width: 100%;
+  padding: 0px;
+  min-height: 100%;
+  overflow-x: hidden;
+}
+/* #endregion */
+
+/* #region Navbar */
+:root {
+  --vertical: 0px;
+  --bur: 40px;
+  --spread: -0px;
+  --opacity: 1;
+  --red: 0;
+  --green: 0;
+  --blue: 0;
+}
+
+.nav {
+  background-color: #e94560;
+  color: white;
+}
+
+#myTab .nav-item {
+  margin-top: 5px;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+.nav-pills .nav-link.active,
+.nav-pills .show > .nav-link {
+  background: none;
+  color: white;
+}
+
+.nav-link.active > .selected {
+  display: block;
+}
+
+.navbar-brand {
+  color: white;
+}
+
+.selected {
+  display: none;
+  border-radius: 100px;
+  background-color: black;
+  height: 5px;
+  width: 80%;
+  margin: 3px auto auto auto;
+}
+
+.nav a {
+  color: white;
+}
+
+.navbar-toggler,
+.navbar-toggler > i {
+  border: 2px solid white;
+  color: white;
+}
+
+.navbar-toggler:focus {
+  outline: none;
+}
+
+.navbar-toggler:active,
+.navbar-toggler > i {
+  color: black;
+  border: 2px solid black;
+}
+
+.navbar {
+  padding: 2px 15px;
+  background-color: #e94560;
+  -webkit-box-shadow: 0px var(--vertical) var(--bur) var(--spread)
+    rgba(var(--red), var(--green), var(--blue), var(--opacity));
+  -moz-box-shadow: 0px var(--vertical) var(--bur) var(--spread)
+    rgba(var(--red), var(--green), var(--blue), var(--opacity));
+  box-shadow: 0px var(--vertical) var(--bur) var(--spread)
+    rgba(var(--red), var(--green), var(--blue), var(--opacity));
+}
+
+.navbar a {
+  text-decoration: none;
+}
+
+.navbar .nav-item{
+  font-family: "YellowTail";
+  font-size: 1.2em;
+  letter-spacing: 5px;
+}
+
+.navbar-brand {
+  font-size: 1.5rem;
+  font-family: "Pacifico";
+  letter-spacing: 0.3em;
+  color: white;
+}
+
+.navbar-brand:hover {
+  color: white;
+}
+
+.navbar-item {
+  font-size: 1.2rem;
+  font-family: "Arial";
+  letter-spacing: 0.3em;
+  color: white;
+  margin: 0px 20px;
+}
+
+.navbar-item:hover {
+  color: black;
+}
+
+.search {
+  width: 300px;
+  height: 40px;
+  margin-top: 5px;
+  border: 1px solid white;
+  background-color: white;
+  color: black;
+}
+
+.search:focus {
+  border: 1px solid white;
+  background-color: white;
+  color: black;
+}
+
+.modeToggle {
+  margin: 10px;
+}
+/* #endregion */
+
+/* #region Layout */
+.row {
+  padding: 0px;
+  margin: 0px;
+}
+
+.col {
+  height: calc(100vh - 63px);
+}
+/* #endregion */
+
+/* #region Left Layout */
+.left > .card {
+  background-color: #393b44;
+  border-radius: 20px;
+  width: 100%;
+  height: calc(100% - 40px);
+  margin: 20px auto;
+  float: none; /* Added */
+  -webkit-box-shadow: 0px 25px 30px -10px rgba(0, 0, 0, 0.8);
+  -moz-box-shadow: 0px 25px 30px -10px rgba(0, 0, 0, 0.8);
+  box-shadow: 0px 25px 30px -10px rgba(0, 0, 0, 0.8);
+}
+
+.crop {
+  height: calc(80vh - 60px);
+  overflow: hidden;
+  border-radius: 20px;
+  margin-top: 15px;
+}
+
+.crop > img {
+  object-fit: cover;
+  height: 100%;
+  width: 200%;
+  margin: 0px 0px 0px -100px;
+}
+
+.left .card-title {
+  font-size: 2.5em;
+}
+
+.left .card-text {
+  font-size: 1.5em;
+}
+
+.description {
+  font-size: 30px;
+}
+
+.col-lg-4 {
+  margin: 15px 0px 0px 0px;
+}
+
+.card .col-12{
+  padding: 10px;
+}
+
+.col-6,
+.col-4,
+.col-5{
+  padding: 0px;
+}
+
+.col-4{
+  margin-top: -5px;
+}
+
+.uppertext {
+  color: white;
+  font-size: 1.4em;
+  letter-spacing: 0.15em;
+  font-family: "Ubuntu";
+}
+
+.lowertext {
+  color: white;
+  font-size: 1.2em;
+  letter-spacing: 0.15em;
+  font-family: "Ubuntu";
+}
+
+.subtitle {
+  color: rgb(233, 69, 96, 0.8);
+  position: relative;
+  font-size: 1em;
+  margin: -5px 0px 0px 0px;
+  font-family: "Ubuntu";
+}
+
+.temperature {
+  font-family: "Satisfy";
+  font-size: 8em;
+  margin: 15px 0;
+}
+
+.today {
+  font-family: "Ubuntu";
+  position: relative;
+  top: -80px;
+  font-size: 3em;
+}
+
+.weather {
+  color: white;
+  font-family: "Ubuntu";
+  position: relative;
+  top: -70px;
+  font-size: 1.5em;
+}
+
+.date {
+  font-family: "Ubuntu";
+  position: relative;
+  top: -70px;
+  font-size: 1.5em;
+  color: gray;
+}
+
+.celsius {
+  color: rgb(233, 69, 96, 0.8);
+}
+/* #endregion */
+
+/* #region Rigth layout */
+.col-lg-9 {
+  margin: 0px;
+  padding: 0px;
+}
+
+.top {
+  height: 70%;
+  margin: 0;
+  padding: 0;
+}
+
+.innertop {
+  height: 10%;
+  padding: 20px 0px 0px 10px;
+}
+
+.innertop h3{
+  color: black;
+  margin: 0px 0px 20px 0px;
+}
+
+.botTitle {
+  color: black;
+  font-family: "Permanent Marker";
+  letter-spacing: 0.5em;
+  margin: 15px 0px;
+}
+
+.innerbot {
+  height: 90%;
+  width: 100%;
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-y: auto;
+}
+
+.customCard {
+  background-color: #f6f6f6;
+  text-align: center;
+  margin: 0px 10px 20px 10px;
+  border: 2px solid black;
+  border-radius: 20px;
+  height: calc(100% - 20px);
+  width: 300px;
+  flex: none;
+  -webkit-box-shadow: inset 0px 0px 20px 0px rgba(0, 0, 0, 0.4);
+  -moz-box-shadow: inset 0px 0px 20px 0px rgba(0, 0, 0, 0.4);
+  box-shadow: inset 0px 0px 20px 0px rgba(0, 0, 0, 0.4);
+  animation-delay: 0.8s;
+}
+
+.innerbot .customCard > .card-body {
+  padding: 10px;
+  width: 100%;
+}
+
+.bodyTop {
+  height: 10%;
+}
+
+.bodyIcon {
+  height: 35%;
+  border-bottom: 2px solid black;
+}
+
+.bodyIcon > .col-lg-12 {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.bodyTitle {
+  height: 20%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.bodyMid {
+  height: 20%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.bodyBot {
+  height: 15%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cardTitle {
+  height: 100%;
+  width: 100%;
+  margin: 0px;
+  font-family: "Lobster";
+  font-size: 2em;
+  letter-spacing: 2px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cardText {
+  font-family: "Ubuntu";
+  font-weight: bold;
+  font-size: 1.6em;
+  letter-spacing: 2px;
+  margin: 0px;
+}
+
+.cardSubtitle {
+  font-family: "Ubuntu";
+  font-size: 1em;
+  font-weight: bold;
+  margin: 0px;
+  color: rgb(233, 69, 96, 0.8);
+}
+
+.customCard .row > .col-lg-6,
+.customCard .row > .col-lg-12 {
+  padding: 0px;
+}
+/* #endregion */
+
+/* #region Bottom Card Layout */
+.right .bot {
+  height: calc(30% - 20px);
+  padding: 10px 20px 20px 20px;
+}
+
+.bot h3 {
+  font-family: "Permanent Marker";
+  letter-spacing: 0.5em;
+}
+
+.nearbyrow {
+  height: calc(100% - 30px);
+  margin: 0px;
+  padding: 0px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.bot .col-lg-4 {
+  margin: 0px;
+  padding: 0px;
+}
+
+.nearbybot{
+  height: calc(100% - 0px);
+  padding: 0;
+  margin: 0;
+  animation-delay: 0.8s;
+}
+
+.nearbyCard {
+  margin: 10px;
+  height: calc(100% - 20px);
+  color: black;
+  border-style: none none solid none;
+  background-color: rgb(255, 255, 255, 0);
+  border: 3px solid black;
+  border-style: none none solid none;
+  border-bottom-right-radius: 25px;
+  border-bottom-left-radius: 25px;
+  -webkit-box-shadow: 0px 30px 30px -15px rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: 0px 30px 30px -15px rgba(0, 0, 0, 0.5);
+  box-shadow: 0px 30px 30px -15px rgba(0, 0, 0, 0.5);
+}
+
+.nearbyCardBody {
+  padding: 10px;
+}
+
+.nearbyCardrowTop {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  height: calc(90% - 10px);
+}
+
+.nearbyCardrowBot {
+  text-align: center;
+  height: calc(10% + 20px);
+}
+
+.nearbyTemp {
+  font-size: 2em;
+  font-family: "Ubuntu";
+}
+
+.nearbyCity {
+  font-size: 1.8em;
+  font-family: "YellowTail";
+}
+
+.subText {
+  font-size: 1em;
+  letter-spacing: 0.1em;
+  font-weight: bold;
+}
+.nearbyCardcol > img {
+  height: 80%;
+  width: 80%;
+}
+/* #endregion */
+
+/* #region Error Page Tab */
+.errorpage{
+  position: fixed;
+  display: none;
+  z-index: 0;
+  cursor: pointer;
+  height: calc(100vh - 64px);
+}
+
+.errorTitle{
+  color: black;
+  text-align: center;
+  font-size: 3em;
+  font-weight: bold;
+  font-family: "Satisfy";
+}
+
+.errorText{
+  color: #7c7d7f;
+  font-size: 1.5em;
+  text-align: center;
+}
+
+.img{
+  display: block;
+  text-align: center;
+}
+
+.img img{
+  object-fit: cover;
+}
+
+.outterError{
+  width: 80%;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+/* #endregion */
+
+/* #region 5Days Tab */
+.fiveDay{
+  display: none;
+}
+
+.topfiveDay{
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-y: auto;
+  justify-content: space-evenly;
+  animation-delay: 0.6s;
+}
+
+.fiveDay .topfiveDay .card{
+  background-color:white;
+  padding: 0px;
+  cursor: pointer;
+}
+
+.fiveDay .row .card{
+  margin: 20px 10px 10px 20px;
+  padding: 0;
+  border-radius: 20px;
+  border: 1px solid black;
+  flex: none;
+}
+
+.fiveDay .row .card .card-body .row{
+  text-align: center;
+}
+
+.fiveDay .row .card .card-body .row .col-lg-12,
+.fiveDay .row .card .card-body .row .col-12,
+.fiveDay .row .card .card-body .row .col-lg-3,
+.fiveDay .row .card .card-body .row .col-lg-9{
+  margin: 0;
+  padding: 0;
+}
+
+.fiveDay .row .card .card-body .row .title{
+  font-size: 1.5em;
+  font-weight: bold;
+  font-family: "Lobster";
+  letter-spacing: 1px;
+  color: black
+}
+
+.fiveDay .row .card .card-body .row .text{
+  font-size: 1.2em;
+  font-weight: bold;
+  font-family: "Ubuntu";
+  color: black;
+}
+
+.botfiveDay{
+  height: calc(70vh - 73px);
+  padding: 0px 0px 0px 0px;
+  overflow-x: hidden;
+}
+
+.rowTop{
+  height: 100%;
+}
+
+.rowBot{
+  margin-top: 20px;
+  height: calc(100% - 70px);
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-y: hidden;
+  overflow-x: auto;
+}
+
+.rowBot .card{
+  flex: none;
+}
+
+.rowBot .customCard{
+  height: auto;
+}
+/* #endregion */
+
+/* #region Custom Scrollbar */
+.innerbot::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+
+.innerbot::-webkit-scrollbar-button {
+  width: 50px;
+  height: 50px;
+}
+
+.innerbot::-webkit-scrollbar-thumb {
+  background: #ff0000;
+  border: 0px none #ffffff;
+  border-radius: 100px;
+}
+
+.innerbot::-webkit-scrollbar-thumb:hover {
+  background: rebeccapurple;
+}
+
+.innerbot::-webkit-scrollbar-thumb:active {
+  background: lightcoral;
+}
+
+.innerbot::-webkit-scrollbar-track {
+  background: black;
+  border: 0px none #ffffff;
+  border-radius: 100px;
+}
+
+.innerbot::-webkit-scrollbar-track:hover {
+  background: black;
+}
+
+.innerbot::-webkit-scrollbar-track:active {
+  background: black;
+}
+
+.innerbot::-webkit-scrollbar-corner {
+  background: transparent;
+}
+/* #endregion */
+
+/* #region Other */
+.cardTitle,
+.cardText,
+.mainText,
+.subText {
+  color: black;
+}
+
+.uppertext,
+.lowertext {
+  color: white;
+}
+
+@media only screen and (max-width: 576px){
+  h3{
+    text-align: center;
+    font-size: 1.5em;
+  }
+  .innertop{
+    margin-bottom: 10px;
+  }
+  .uppertext{
+    font-size: 1.2em;
+  }
+  .lowertext {
+    font-size: 1.0em;
+  }
+  .botTitle{
+    margin-top: 10px;
+  }
+  .errorTitle{
+    font-size: 2em;
+  }
+  .errorText{
+    font-size: 1.2em;
+  }
+  .img img{
+    object-fit: cover;
+    height: 70%;
+    width: 70%;
+  }
+}
+
+@media only screen and (min-width: 576px) and (max-width: 768px){
+  .img img{
+    object-fit: cover;
+    height: 60%;
+    width: 60%;
+  }
+}
+/* #endregion */

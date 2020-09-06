@@ -1,0 +1,659 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Exam</title>
+
+    <!-- Google Font -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Pacifico&family=Permanent+Marker&family=Satisfy&family=Ubuntu&family=Lobster&family=Sacramento&family=Yellowtail&display=swap"
+        rel="stylesheet">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+    <!-- Animated CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css" />
+
+    <!-- Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous">
+    </script>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body onload="getGeoLcoation()">
+    <div class="container-fluid">
+        <nav class="navbar navbar-expand-lg">
+            <a class="active navbar-brand" href="JSExam.html">Dark Meteor</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02"
+                aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+                <span><i class="fas fa-bars"></i></span>
+            </button>
+
+            <div class="collapse navbar-collapse " id="navbarTogglerDemo02">
+                <ul class="navbar-nav ml-auto">
+                    <ul class="nav nav-pills" id="myTab" role="tablist">
+                        <li class="nav-item currentli">
+                            <a class="currentDayLink nav-link active" id="today-tab" data-toggle="tab" href="#today" role="tab"
+                                aria-controls="today" aria-selected="true">Today Weather<div
+                                    class="currentDayselected selected animate__animated animate__slideInRight"></div></a>
+                        </li>
+                        <li class="nav-item fivedayli">
+                            <a class="fiveDayLink nav-link" id="fiveday-tab" data-toggle="tab" href="#fiveday" role="tab"
+                                aria-controls="fiveday" aria-selected="false">5-Days Weather<div
+                                    class="fiveDayselected selected animate__animated animate__slideInLeft"></div></a>
+                        </li>
+                        <button class="ml-auto modeToggle btn btn-dark"><i class="fas fa-adjust"></i></button>
+                        <input class="ml-auto form-control search" id="search" type="search"
+                            placeholder="Enter City Name" aria-label="Search">
+                    </ul>
+                </ul>
+            </div>
+        </nav>
+
+        <div class="tab-content" id="myTabContent">
+            <!-- 404 Page -->
+            <div class="errorpage container-fluid col-lg-12 col-md-12 col-sm-12 col-12">
+                <div class="row">
+                    <div class=" outterError">
+                        <span class="img"><img src="images/art.png"></span>
+                        <p class="errorTitle">OOP! PAGES NOT FOUND</p>
+                        <p class="errorText">You must have picked the wrong door because I haven't been able to lay my
+                            eye on the page you've been searching for</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Today Tab -->
+            <div class="currentDay animate__animated animate__slideInRight">
+                <div class="row ">
+                    <div class="left col col-12 col-md-12 col-lg-3">
+                        <!-- Main Card -->
+                        <div class="card col-md-10 col-lg-12">
+                            <div class="crop">
+                                <img class="card-img-top"
+                                    src="https://image.freepik.com/free-vector/flat-style-clouds-blue-shades-background_1017-23284.jpg"
+                                    alt="Card image cap">
+                            </div>
+
+                            <div class="card-img-overlay text-white">
+                                <div class="temperature col-lg-12">29&deg;<space class="celsius">c</space>
+                                </div>
+                                <div class="weather col-lg-12">Sunny</div>
+                                <div class="date col-lg-12">Sun 30th Aug</div>
+                            </div>
+
+                            <div class="card-body col-12">
+                                <div class="row">
+                                    <div class="col-lg-6 col-md-6 col-6">
+                                        <div class="uppertext description">weather</div>
+                                        <div class="subtitle">weather</div>
+                                    </div>
+                                    <div class="col-lg-6 col-md-6 col-6">
+                                        <div class="uppertext city">London</div>
+                                        <div class="subtitle">city</div>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-lg-4 col-md-4 col-4">
+                                        <div class="lowertext sunrise">5:30am</div>
+                                        <div class="subtitle">sunrise</div>
+                                    </div>
+
+                                    <div class="col-lg-4 col-md-4 col-4">
+                                        <div class="lowertext sunset">6:00pm</div>
+                                        <div class="subtitle">sunset</div>
+                                    </div>
+
+                                    <div class="col-lg-4 col-md-4 col-4">
+                                        <div class="lowertext duration">10hrs</div>
+                                        <div class="subtitle">duration</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col right col-lg-9">
+                        <div class="top col-lg-12">
+                            <div class="innertop">
+                                <h3 class="botTitle">Hourly Weather</h3>
+                            </div>
+
+                            <div class="innerbot">
+                                <div class="customCard card">
+                                    <div class="card-body">
+                                        <div class="bodyTop row">
+                                            <div class="col-lg-12">
+                                                <p class="cardTitle hourelyday">Today</p>
+                                            </div>
+                                        </div>
+
+                                        <div class="bodyIcon row">
+                                            <div class="col-lg-12">
+                                                <img src="images/unknown.png" class="icon">
+                                            </div>
+                                        </div>
+
+                                        <div class="bodyTitle row">
+                                            <div class="col-lg-6 col-md-6 col-6">
+                                                <p class="cardText hourlyforecast">Time</p>
+                                                <p class="cardSubtitle">time</p>
+                                            </div>
+
+                                            <div class="col-lg-6 col-md-6 col-6">
+                                                <p class="cardText hourlyforecast">Sunny</p>
+                                                <p class="cardSubtitle">forecast</p>
+                                            </div>
+                                        </div>
+
+                                        <div class="bodyMid row">
+                                            <div class="col-lg-6 col-md-6 col-6">
+                                                <p class="cardText hourlytemp">30&deg;c</p>
+                                                <p class="cardSubtitle">temperature</p>
+                                            </div>
+
+                                            <div class="col-lg-6 col-md-6 col-6">
+                                                <p class="cardText hourlyfeel">29&deg;c</p>
+                                                <p class="cardSubtitle">real feel</p>
+                                            </div>
+                                        </div>
+
+                                        <div class="bodyBot row">
+                                            <div class="col-lg-12">
+                                                <p class="cardText hourlywind">11km/h SSW</p>
+                                                <p class="cardSubtitle">wind</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="customCard card">
+                                    <div class="card-body">
+                                        <div class="bodyTop row">
+                                            <div class="col-lg-12">
+                                                <p class="cardTitle hourelyday">Today</p>
+                                            </div>
+                                        </div>
+
+                                        <div class="bodyIcon row">
+                                            <div class="col-lg-12">
+                                                <img src="images/unknown.png" class="icon">
+                                            </div>
+                                        </div>
+
+                                        <div class="bodyTitle row">
+                                            <div class="col-lg-6 col-md-6 col-6">
+                                                <p class="cardText hourlyforecast">Time</p>
+                                                <p class="cardSubtitle">time</p>
+                                            </div>
+
+                                            <div class="col-lg-6 col-md-6 col-6">
+                                                <p class="cardText hourlyforecast">Sunny</p>
+                                                <p class="cardSubtitle">forecast</p>
+                                            </div>
+                                        </div>
+
+                                        <div class="bodyMid row">
+                                            <div class="col-lg-6 col-md-6 col-6">
+                                                <p class="cardText hourlytemp">30&deg;c</p>
+                                                <p class="cardSubtitle">temperature</p>
+                                            </div>
+
+                                            <div class="col-lg-6 col-md-6 col-6">
+                                                <p class="cardText hourlyfeel">29&deg;c</p>
+                                                <p class="cardSubtitle">real feel</p>
+                                            </div>
+                                        </div>
+
+                                        <div class="bodyBot row">
+                                            <div class="col-lg-12">
+                                                <p class="cardText hourlywind">11km/h SSW</p>
+                                                <p class="cardSubtitle">wind</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="customCard card">
+                                    <div class="card-body">
+                                        <div class="bodyTop row">
+                                            <div class="col-lg-12">
+                                                <p class="cardTitle hourelyday">Today</p>
+                                            </div>
+                                        </div>
+
+                                        <div class="bodyIcon row">
+                                            <div class="col-lg-12">
+                                                <img src="images/unknown.png" class="icon">
+                                            </div>
+                                        </div>
+
+                                        <div class="bodyTitle row">
+                                            <div class="col-lg-6 col-md-6 col-6">
+                                                <p class="cardText hourlyforecast">Time</p>
+                                                <p class="cardSubtitle">time</p>
+                                            </div>
+
+                                            <div class="col-lg-6 col-md-6 col-6">
+                                                <p class="cardText hourlyforecast">Sunny</p>
+                                                <p class="cardSubtitle">forecast</p>
+                                            </div>
+                                        </div>
+
+                                        <div class="bodyMid row">
+                                            <div class="col-lg-6 col-md-6 col-6">
+                                                <p class="cardText hourlytemp">30&deg;c</p>
+                                                <p class="cardSubtitle">temperature</p>
+                                            </div>
+
+                                            <div class="col-lg-6 col-md-6 col-6">
+                                                <p class="cardText hourlyfeel">29&deg;c</p>
+                                                <p class="cardSubtitle">real feel</p>
+                                            </div>
+                                        </div>
+
+                                        <div class="bodyBot row">
+                                            <div class="col-lg-12">
+                                                <p class="cardText hourlywind">11km/h SSW</p>
+                                                <p class="cardSubtitle">wind</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="customCard card">
+                                    <div class="card-body">
+                                        <div class="bodyTop row">
+                                            <div class="col-lg-12">
+                                                <p class="cardTitle hourelyday">Today</p>
+                                            </div>
+                                        </div>
+
+                                        <div class="bodyIcon row">
+                                            <div class="col-lg-12">
+                                                <img src="images/unknown.png" class="icon">
+                                            </div>
+                                        </div>
+
+                                        <div class="bodyTitle row">
+                                            <div class="col-lg-6 col-md-6 col-6">
+                                                <p class="cardText hourlyforecast">Time</p>
+                                                <p class="cardSubtitle">time</p>
+                                            </div>
+
+                                            <div class="col-lg-6 col-md-6 col-6">
+                                                <p class="cardText hourlyforecast">Sunny</p>
+                                                <p class="cardSubtitle">forecast</p>
+                                            </div>
+                                        </div>
+
+                                        <div class="bodyMid row">
+                                            <div class="col-lg-6 col-md-6 col-6">
+                                                <p class="cardText hourlytemp">30&deg;c</p>
+                                                <p class="cardSubtitle">temperature</p>
+                                            </div>
+
+                                            <div class="col-lg-6 col-md-6 col-6">
+                                                <p class="cardText hourlyfeel">29&deg;c</p>
+                                                <p class="cardSubtitle">real feel</p>
+                                            </div>
+                                        </div>
+
+                                        <div class="bodyBot row">
+                                            <div class="col-lg-12">
+                                                <p class="cardText hourlywind">11km/h SSW</p>
+                                                <p class="cardSubtitle">wind</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="customCard card">
+                                    <div class="card-body">
+                                        <div class="bodyTop row">
+                                            <div class="col-lg-12">
+                                                <p class="cardTitle hourelyday">Today</p>
+                                            </div>
+                                        </div>
+
+                                        <div class="bodyIcon row">
+                                            <div class="col-lg-12">
+                                                <img src="images/unknown.png" class="icon">
+                                            </div>
+                                        </div>
+
+                                        <div class="bodyTitle row">
+                                            <div class="col-lg-6 col-md-6 col-6">
+                                                <p class="cardText hourlyforecast">Time</p>
+                                                <p class="cardSubtitle">time</p>
+                                            </div>
+
+                                            <div class="col-lg-6 col-md-6 col-6">
+                                                <p class="cardText hourlyforecast">Sunny</p>
+                                                <p class="cardSubtitle">forecast</p>
+                                            </div>
+                                        </div>
+
+                                        <div class="bodyMid row">
+                                            <div class="col-lg-6 col-md-6 col-6">
+                                                <p class="cardText hourlytemp">30&deg;c</p>
+                                                <p class="cardSubtitle">temperature</p>
+                                            </div>
+
+                                            <div class="col-lg-6 col-md-6 col-6">
+                                                <p class="cardText hourlyfeel">29&deg;c</p>
+                                                <p class="cardSubtitle">real feel</p>
+                                            </div>
+                                        </div>
+
+                                        <div class="bodyBot row">
+                                            <div class="col-lg-12">
+                                                <p class="cardText hourlywind">11km/h SSW</p>
+                                                <p class="cardSubtitle">wind</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col bot col-lg-12 col-md-12">
+                            <h3 class="botTitle">Nearby Cities</h3>
+
+                            <div class="nearbyrow row">
+                                <div class="nearbybot col-lg-4 col-md-10 col-12">
+                                    <div class="nearbyCard card">
+                                        <div class="nearbyCardBody card-body">
+                                            <div class="nearbyCardrowTop row">
+                                                <div class="nearbyCardcol col-lg-4 col-md-3 col-3">
+                                                    <img src="images/unknown.png">
+                                                </div>
+                                                <div class="nearbyCardcol col-lg-3 col-md-4 col-4">
+                                                    <div class="nearbyTemp mainText">
+                                                        25&deg;c
+                                                    </div>
+                                                </div>
+                                                <div class="nearbyCardcol  col-lg-5 col-md-5 col-5">
+                                                    <div class="nearbyCity mainText">
+                                                        New York
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="nearbyCardrowBot row">
+                                                <div class="nearbyCardcol col-lg-5 col-md-5 col-5">
+                                                    <div class="subText">
+                                                        Humid 64%
+                                                    </div>
+                                                </div>
+                                                <div class="nearbyCardcol col-lg-2 col-md-2 col-2">
+                                                    <div class="subText">
+                                                        |
+                                                    </div>
+                                                </div>
+                                                <div class="nearbyCardcol col-lg-5 col-md-5 col-5">
+                                                    <div class="subText">
+                                                        NorthEast
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="nearbybot col-lg-4 col-md-10 col-12">
+                                    <div class="nearbyCard card">
+                                        <div class="nearbyCardBody card-body">
+                                            <div class="nearbyCardrowTop row">
+                                                <div class="nearbyCardcol col-lg-4 col-md-3 col-3">
+                                                    <img src="images/unknown.png">
+                                                </div>
+                                                <div class="nearbyCardcol col-lg-3 col-md-4 col-4">
+                                                    <div class="nearbyTemp mainText">
+                                                        25&deg;c
+                                                    </div>
+                                                </div>
+                                                <div class="nearbyCardcol  col-lg-5 col-md-5 col-5">
+                                                    <div class="nearbyCity mainText">
+                                                        New York
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="nearbyCardrowBot row">
+                                                <div class="nearbyCardcol col-lg-5 col-md-5 col-5">
+                                                    <div class="subText">
+                                                        Humid 64%
+                                                    </div>
+                                                </div>
+                                                <div class="nearbyCardcol col-lg-2 col-md-2 col-2">
+                                                    <div class="subText">
+                                                        |
+                                                    </div>
+                                                </div>
+                                                <div class="nearbyCardcol col-lg-5 col-md-5 col-5">
+                                                    <div class="subText">
+                                                        NorthEast
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="nearbybot col-lg-4 col-md-10 col-12">
+                                    <div class="nearbyCard card">
+                                        <div class="nearbyCardBody card-body">
+                                            <div class="nearbyCardrowTop row">
+                                                <div class="nearbyCardcol col-lg-4 col-md-3 col-3">
+                                                    <img src="images/unknown.png">
+                                                </div>
+                                                <div class="nearbyCardcol col-lg-3 col-md-4 col-4">
+                                                    <div class="nearbyTemp mainText">
+                                                        25&deg;c
+                                                    </div>
+                                                </div>
+                                                <div class="nearbyCardcol  col-lg-5 col-md-5 col-5">
+                                                    <div class="nearbyCity mainText">
+                                                        New York
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="nearbyCardrowBot row">
+                                                <div class="nearbyCardcol col-lg-5 col-md-5 col-5">
+                                                    <div class="subText">
+                                                        Humid 64%
+                                                    </div>
+                                                </div>
+                                                <div class="nearbyCardcol col-lg-2 col-md-2 col-2">
+                                                    <div class="subText">
+                                                        |
+                                                    </div>
+                                                </div>
+                                                <div class="nearbyCardcol col-lg-5 col-md-5 col-5">
+                                                    <div class="subText">
+                                                        NorthEast
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 5-Days Weather tab -->
+            <div class="fiveDay animate__animated animate__slideInLeft">
+                <div class="topfiveDay row animate__animated animate__bounceInDown">
+                    <div class="card0 card col-lg-2">
+                        <div class="card-body">
+                            <div class="row rowDate">
+                                <div class="title col-lg-12">
+                                    Sunday, 30th September
+                                </div>
+                            </div>
+
+                            <div class="row rowImg">
+                                <div class="img col-lg-12">
+                                    <img src="images/unknown.png">
+                                </div>
+                            </div>
+
+                            <div class="row rowWeather">
+                                <div class="text col-lg-3">
+                                    29&deg;c
+                                </div>
+                                <div class="text col-lg-9">
+                                    Clear, Warm
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card1 card col-lg-2">
+                        <div class="card-body">
+                            <div class="row rowDate">
+                                <div class="title col-lg-12">
+                                    Sunday, 30th September
+                                </div>
+                            </div>
+
+                            <div class="row rowImg">
+                                <div class="img col-lg-12">
+                                    <img src="images/unknown.png">
+                                </div>
+                            </div>
+
+                            <div class="row rowWeather">
+                                <div class="text col-lg-3">
+                                    29&deg;c
+                                </div>
+                                <div class="text col-lg-9">
+                                    Clear, Warm
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card2 card col-lg-2">
+                        <div class="card-body">
+                            <div class="row rowDate">
+                                <div class="title col-lg-12">
+                                    Sunday, 30th September
+                                </div>
+                            </div>
+
+                            <div class="row rowImg">
+                                <div class="img col-lg-12">
+                                    <img src="images/unknown.png">
+                                </div>
+                            </div>
+
+                            <div class="row rowWeather">
+                                <div class="text col-lg-3">
+                                    29&deg;c
+                                </div>
+                                <div class="text col-lg-9">
+                                    Clear, Warm
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card3 card col-lg-2">
+                        <div class="card-body">
+                            <div class="row rowDate">
+                                <div class="title col-lg-12">
+                                    Sunday, 30th September
+                                </div>
+                            </div>
+
+                            <div class="row rowImg">
+                                <div class="img col-lg-12">
+                                    <img src="images/unknown.png">
+                                </div>
+                            </div>
+
+                            <div class="row rowWeather">
+                                <div class="text col-lg-3">
+                                    29&deg;c
+                                </div>
+                                <div class="text col-lg-9">
+                                    Clear, Warm
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card4 card col-lg-2">
+                        <div class="card-body">
+                            <div class="row rowDate">
+                                <div class="title col-lg-12">
+                                    Sunday, 30th September
+                                </div>
+                            </div>
+
+                            <div class="row rowImg">
+                                <div class="img col-lg-12">
+                                    <img src="images/unknown.png">
+                                </div>
+                            </div>
+
+                            <div class="row rowWeather">
+                                <div class="text col-lg-3">
+                                    29&deg;c
+                                </div>
+                                <div class="text col-lg-9">
+                                    Clear, Warm
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="botfiveDay row">
+                    <div class="rowTop col-lg-12">
+                        <h3 class="botTitle botFiveDayTitle">Select option above to show hourly weather</h3>
+
+                        <div class="row rowBot">
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+<!-- Time and Timezone JS library -->
+<script src="moment-with-locales.js"></script>
+<script src="moment-timezone-with-data.min.js"></script>
+
+<!-- Json Data -->
+<script src="Data.js"></script>
+
+<!-- Custom Script -->
+<script src="script.js"></script>
+
+</html>

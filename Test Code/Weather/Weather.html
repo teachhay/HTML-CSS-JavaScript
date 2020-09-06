@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Weather</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+
+    <body>
+        <div class="wrapper">
+            <div class="top">
+                <label>Enter City Name : </label>
+                <input type="text" value="" class="cityname">
+
+                <button class="btn submit">Submit</button>
+                <button class="btn generate">Generate</button>
+                <button class="btn btntest">Test</button>
+            </div>
+
+            <div class="mid">
+                <div class="left">
+                    <p class="city">City Name : </p>
+                    <p class="date">Date : </p>
+                    <img src ="../../images/unknown.png" class="icon">
+                    <p class="description">Description : </p>
+                </div>
+
+                <div class="right">
+                    <p class="temperature">Temperature : </p>
+                    <p class="realfeel">Real Feel : </p>
+                    <p class="sunrise">Sunrise : </p>
+                    <p class="sunset">Sunset : </p>
+                    <p class="duration">Duration : </p>
+                </div>
+            </div>
+
+            <div class="bot">
+                <div class="test">
+                    <p>Today</p>
+                    <img src="../../images/unknown.png"></img>
+                    <p>Forecast</p>
+                    <p>Temp</p>
+                    <p>Real Feel</p>
+                    <p>Wind</p>
+                </div>
+            </div>
+        </div>
+    </body>
+
+    <script src="moment.js"></script>
+    <script src="moment-timezone-with-data.js"></script>
+    <script src="script.js"></script>
+</html>

@@ -1,0 +1,92 @@
+body {
+  background-color: #16171b;
+}
+
+.container-fluid {
+  background-color: #16171b;
+}
+
+.navbar-toggler,
+.navbar-toggler > i {
+  border: 2px solid black;
+  color: black;
+}
+
+.nav a {
+  color: black;
+}
+
+.selected {
+  background-color: white;
+}
+
+.search {
+  border: 1px solid black;
+  background-color: black;
+  color: white;
+}
+
+.search:focus {
+  border: 1px solid black;
+  background-color: black;
+  color: white;
+}
+
+.nav-pills .nav-link.active,
+.nav-pills .show > .nav-link {
+  color: black;
+}
+
+.navbar-brand {
+  color: black;
+}
+
+.navbar-toggler:focus {
+  outline: none;
+}
+
+.navbar-toggler:active,
+.navbar-toggler > i {
+  color: white;
+  border: 2px solid white;
+}
+
+.customCard,
+.fiveDay .topfiveDay .card {
+  background-color: #202125;
+}
+
+.nearbyCard {
+  border-style: none none solid none;
+  border-style: none none solid none;
+  border: 3px solid #202125;
+}
+
+.left > .card {
+  background-color: #202125;
+}
+
+.innertop > h3,
+.botTitle,
+.cardTitle,
+.uppertext,
+.lowertext,
+.cardText,
+.mainText,
+.subText,
+.fiveDay .row .card .card-body .row .title,
+.fiveDay .row .card .card-body .row .text {
+  color: #7c7d7f;
+}
+
+.bodyIcon {
+  border-bottom: 2px solid white;
+}
+
+.errorTitle {
+  color: white;
+}
+
+.errorText {
+  color: #7c7d7f;
+}

@@ -1,0 +1,96 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.wrapper{
+    width: 50%;
+    height: 50%;
+    background-color: lightgreen;
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    margin: auto;
+}
+
+.top{
+    display: flex;
+    align-items: center;
+    background-color: lightblue;
+    height: 10%;
+    padding: 0 20px;
+}
+
+.top input{
+    padding: 5px;
+    margin-left: 10px;
+}
+
+.top button{
+    margin-left: 10px;
+    width: 100px;
+    height: 30px;
+}
+
+.mid{
+    height: 45%;
+    font-size: 20px;
+    font-family: "Comic Sans MS";
+    display: flex;
+    flex-flow: row;
+}
+
+.mid p{
+    margin-left: 20px;
+}
+
+.mid img{
+    margin-left: 20px;
+    width: 64px;
+    height: 64px;
+}
+
+.left{
+    height: 100%;
+    width: 50%;
+    background-color: lightpink;
+    display : flex;
+	flex-direction: column;
+	justify-content:space-between;
+}
+
+.right{
+    height: 100%;
+    width: 50%;
+    background-color: lightseagreen;
+    display : flex;
+	flex-direction: column;
+	justify-content:space-between;
+}
+
+.bot{
+    height: calc(45% - 40px);
+    width: calc(100% - 40px);
+    background-color: lightsalmon;
+    padding: 20px;
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+}
+
+.test{
+    padding: 0px 20px;
+    margin: 0px 10px;
+    height: 100%;
+    background-color: white;
+    display : flex;
+	flex-direction: column;
+	justify-content:space-between;
+}
+
+.test img{
+    width: 32px;
+    height: 32px;
+}
