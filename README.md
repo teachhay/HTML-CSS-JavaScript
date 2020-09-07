@@ -47,6 +47,5 @@
     * real feel
     * wind speed and direction
   
-  When the short forecast of one of five days is clicked, it should be visually highlighted and have an hourly forecast below.
-  When this tab opens, today must be selected by default
+  When the short forecast of one of five days is clicked, it should be visually highlighted and have an hourly forecast below.When this tab opens, today must be selected by default.
   Remember that this is a single-page site. This means that clicks—be it searching for another city or navigating through tabs—must NOT (!) refresh the page in the browser. Change the page structure with JavaScript
