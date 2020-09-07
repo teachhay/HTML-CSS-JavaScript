@@ -18,21 +18,20 @@
     • sunrise;
     • sunset;
     • day length (duration).
-    2. Hourly forecast for the rest of the day:
-      • time;
-      • icon;
-      • text description;
-      • temperature;
-      • real feel;
-      • wind speed and direction.
-    3. Nearby cities and forecast:
-      • name;
-      • icon;
-      • temperature.
+   2. Hourly forecast for the rest of the day:
+    • time;
+    • icon;
+    • text description;
+    • temperature;
+    • real feel;
+    • wind speed and direction.
+   3. Nearby cities and forecast:
+    • name;
+    • icon;
+    • temperature.
       
     The search box must always display the name of the city, for which the forecast is displayed, even if the geolocation was determined.
-    ![GitHub Logo](/images/logo.png)
-    Format: ![Alt Text](url)
+
     If the user enters a non-existent city or if API cannot return information on the entered city, inform the user about it using this page:
 
     The 5-day forecast displays 2 blocks.
