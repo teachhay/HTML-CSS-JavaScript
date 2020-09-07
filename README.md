@@ -25,7 +25,7 @@
     * text description
     * temperature
     * real feel
-  * wind speed and direction
+    * wind speed and direction
   - Nearby cities and forecast
     * name
     * icon
