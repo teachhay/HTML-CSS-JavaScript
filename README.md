@@ -1,7 +1,5 @@
 # HTML-CSS-JavaScript
-
-## Task 1
-  Create a single-page weather forecast website
+  ## Create a single-page weather forecast website
   To obtain a forecast, use https://openweathermap.org/. Do not forget to register and get the key
 
   The page should have two tabs
