@@ -37,18 +37,18 @@
 
   The 5-day forecast displays 2 blocks.
   1. Short forecast for each of the five days:
-   • day of the week;
-   • date;
-   • icon;
-   • temperature;
-   • text description.
+   - day of the week;
+   - date;
+   - icon;
+   - temperature;
+   - text description.
   2. Hourly forecast for the selected day:
-   • time;
-   • icon;
-   • text description;
-   • temperature;
-   • real feel;
-   • wind speed and direction.
+   - time;
+   - icon;
+   - text description;
+   - temperature;
+   - real feel;
+   - wind speed and direction.
 
   When the short forecast of one of five days is clicked, it should be visually highlighted and have an hourly forecast below.
   When this tab opens, today must be selected by default.
