@@ -11,25 +11,25 @@
   
   The Today tab displays three blocks
   - Current weather summary
-  * date
-  * icon
-  * text description
-  * temperature
-  * real feel
-  * sunrise
-  * sunset
-  * day length (duration)
+    * date
+    * icon
+    * text description
+    * temperature
+    * real feel
+    * sunrise
+    * sunset
+    * day length (duration)
   - Hourly forecast for the rest of the day
-  * time
-  * icon
-  * text description
-  * temperature
-  * real feel
+    * time
+    * icon
+    * text description
+    * temperature
+    * real feel
   * wind speed and direction
   - Nearby cities and forecast
-  * name
-  * icon
-  * temperature
+    * name
+    * icon
+    * temperature
       
   The search box must always display the name of the city, for which the forecast is displayed, even if the geolocation was determined
 
@@ -37,18 +37,18 @@
 
   The 5-day forecast displays 2 blocks
   - Short forecast for each of the five days
-  * day of the week
-  * date
-  * icon
-  * temperature
-  * text description
+    * day of the week
+    * date
+    * icon
+    * temperature
+    * text description
   - Hourly forecast for the selected day
-  * time
-  * icon
-  * text description
-  * temperature
-  * real feel
-  * wind speed and direction
+    * time
+    * icon
+    * text description
+    * temperature
+    * real feel
+    * wind speed and direction
   
   When the short forecast of one of five days is clicked, it should be visually highlighted and have an hourly forecast below.
   When this tab opens, today must be selected by default
